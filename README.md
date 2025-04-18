@@ -11,12 +11,11 @@ This script extracts Decks from the [Yu-Gi-Oh! Card Database](https://www.db.yug
 
 ## Usage
 
-1. Download and extract the ZIP file.
+1. [Download the script](https://github.com/emanueljoab/YGO-DB-to-Yugipedia/archive/refs/heads/main.zip) and extract it.
 2. Run `start.bat`.
 
 ## Notes
 
-- No dependency installation or setup required; all runtime components are bundled.
+- Most dependencies are pre-installed. Python is bundled, and the batch file installs any remaining requirements on first run.
 - Only public Decks work. Make sure your Decks are public.
 - If a card wasn't released in the TCG, its Japanese name will be displayed.
-- The script is Windows-only.
