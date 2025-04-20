@@ -47,14 +47,13 @@ def count_total(cards):
     return sum(card['quantity'] for card in cards)
 
 async def fetch_deck_data():
-    print('\nLoading. Please wait...')
     decklists_dir = Path(__file__).parent / 'Decklists'
     if not decklists_dir.exists():
         decklists_dir.mkdir(exist_ok=True)
         print(f'Created directory: {decklists_dir}')
 
     async with async_playwright() as p:
-        print('Please enter a valid Yu-Gi-Oh! Card Database Deck URL or type "exit" to quit.')
+        print('\nPlease enter a valid Yu-Gi-Oh! Card Database Deck URL or type \033[93mexit\033[0m to quit.')
         browser = await p.chromium.launch(headless=True)
         try:
             while True:
